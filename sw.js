@@ -24,7 +24,7 @@ self.addEventListener('push', (event) => {
       badge: 'apple-touch-icon.png',
       vibrate: [200, 100, 200], // 震动两下
       data: {
-        url: payload.url || '/' // 点击通知后跳转的地址
+        url: payload.url || '/cki/' // 点击通知后跳转的地址
       }
     };
 
@@ -68,6 +68,6 @@ self.addEventListener('message', (event) => {
     vibrate: [200, 100, 200],
     tag: event.data.tag || ('msg-' + Date.now()),
     renotify: true,
-    data: { url: '/' }
+    data: { url: '/cki/' }
   });
 });
